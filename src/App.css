@@ -1,0 +1,176 @@
+/* General Styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling on the entire page */
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* Vertically center */
+  align-items: center;      /* Horizontally center */
+  text-align: center;
+  height: 100vh;            /* Full viewport height */
+  background: linear-gradient(to right, #1a1a2e, #2f2f4f, #1a1a2e);
+  padding: 20px;
+  color: white;
+  overflow: hidden; /* Prevent outer scroll */
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+/* App-header Style */
+.App-header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  font-size: 28px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;  /* Center horizontally */
+  align-items: center;      /* Center vertically */
+}
+
+/* Proposals Section */
+.proposals-section {
+  margin-top: 30px;
+  max-height: 400px; /* Set a maximum height */
+  overflow-y: auto;  /* Enable vertical scrolling */
+  padding-right: 10px; /* To ensure there's space for the scroll */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Proposal list */
+.proposal-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;  /* Allow vertical scrolling */
+  margin-top: 10px;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Proposal Card */
+.proposal-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  word-wrap: break-word; /* Allow long text to break and avoid overflow */
+}
+
+.proposal-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.proposal-card h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.proposal-card p {
+  color: #666;
+  font-size: 14px;
+}
+
+/* Button Styles */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+  max-width: 200px; /* Restrict button width */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* New Proposal Form */
+.new-proposal {
+  margin-top: 30px;
+}
+
+input[type="text"] {
+  padding: 12px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+h3 {
+  font-size: 22px;
+  color: #333;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .proposal-list {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .proposal-card {
+    width: 100%;
+    padding: 15px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+/* Hide Scrollbars but allow scrolling */
+::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
